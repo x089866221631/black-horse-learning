@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'icomoon';
+        }
+
+        .logo {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            padding-left: 13px;
+            box-sizing: border-box;
+            margin: 30px auto;
+            background-color: orange;
+            overflow: hidden;
+
+        }
+
+
+        .logo::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            content: '\ea15';
+            transition: transform 0.8s ease 0s;
+
+        }
+
+        .logo::after {
+            content: '\e91f';
+        }
+
+        .logo::before,
+        .logo::after {
+            color: white;
+            background-color: orange;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .logo:hover::after,
+        .logo:hover:before {
+            transform: translate(-40px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo"></div>
+</body>
+
+</html>

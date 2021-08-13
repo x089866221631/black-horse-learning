@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8e6f4727ce.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, .3);
+            color: white;
+
+        }
+
+        .prev {
+
+            left: 0;
+
+            border-radius: 0 15px 15px 0;
+        }
+
+        .next {
+
+            right: 0;
+
+            border-radius: 15px 0 0 15px;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: orange;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 6.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="https://img.alicdn.com/imgextra/i4/6000000005354/O1CN01FYFapX1pQBEVrMCRP_!!6000000005354-0-octopus.jpg"
+            alt="">
+        <a href="#" class="prev"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+
+        <ul class="promo-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

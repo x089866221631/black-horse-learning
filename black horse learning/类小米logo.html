@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav-logo .logo {
+            position: relative;
+            display: block;
+            width: 55px;
+            height: 55px;
+            background-color: #ff7600;
+            padding-left: 20px;
+            margin: 30px auto;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .nav-logo .logo::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55px;
+            content: '';
+            transition: transform .3s;
+        }
+
+        .nav-logo .logo:after {
+            background-color: #ff7600;
+            font-family: 'icomoon';
+            content: '';
+        }
+
+        .nav-logo .logo:before {
+            background-color: #ff7600;
+            font-family: 'icomoon';
+            content: '';
+        }
+
+        .nav-logo .logo::after,
+        .nav-logo .logo::before {
+            color: white;
+            text-align: center;
+            line-height: 55px;
+        }
+
+        .nav-logo .logo:hover:after,
+        .nav-logo .logo:hover:before {
+            transform: translate(-55px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-logo">
+        <a href="#" class="logo"></a>
+    </div>
+</body>
+
+</html>

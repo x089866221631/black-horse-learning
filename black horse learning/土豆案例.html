@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8e6f4727ce.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            position: relative;
+            width: 490px;
+            height: 276px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .box:hover::before {
+            display: block;
+        }
+
+        .box::before {
+            content: '';
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 490px;
+            height: 276px;
+            background: rgba(0, 0, 0, .4) no-repeat center url("./play.png");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://m.ykimg.com/054F0101610FB2AC04CD8299706AD0E0?x-oss-process=image/resize,w_490/crop,x_0,y_0,w_490,h_276"
+            alt="">
+
+    </div>
+</body>
+
+</html>

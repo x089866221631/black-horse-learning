@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        /* 一定要加个空格 */
+        /* 第一个li变色 */
+
+        /* 偶数的li变色 */
+        ul li:nth-child(even) {
+            background-color: red;
+        }
+
+        /* 奇数的li变色 */
+        ul li:nth-child(odd) {
+            background-color: aqua;
+        }
+
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        /* 最后一个li变色 */
+        ul li:last-child {
+            background-color: pink;
+        }
+
+        /* 第五个变色 */
+        ul li:nth-child(5) {
+            background-color: pink
+        }
+
+        /* ol 里的li 的偶数 变色 */
+        ol li:nth-child(2n) {
+            background-color: pink;
+        }
+
+        /* ol 里的li 的基数 变色 */
+        ol li:nth-child(2n-1) {
+            background-color: aqua;
+        }
+
+        ol li:nth-child(5n-1) {
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        }
+
+
+        /* nth-child 会把所有的盒子都排列序号
+        执行的时候先看：nth-child(2) 之后回去看 前面的div
+        */
+        section div:nth-child(2) {
+            background-color: #667eea;
+        }
+
+        /* 此处不执行css是因为 div是2 而我选择是nth-child是1 */
+        section div:nth-child(1) {
+            background-color: red;
+        }
+
+        /* nth-of-type 会把指定元素的盒子排列序号
+        执行的时候先看 div（指定的元素） 之后回去看nth-of-type(2)第几个孩子
+        */
+        section div:nth-of-type(2) {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是ul的第1</li>
+        <li>我是ul的第2</li>
+        <li>我是ul的第3</li>
+        <li>我是ul的第4</li>
+        <li>我是ul的第5</li>
+        <li>我是ul的第6</li>
+        <li>我是ul的第7</li>
+        <li>我是ul的第8</li>
+        <li>我是ul的第9</li>
+        <li>我是ul的第10</li>
+        <li>我是ul的第11</li>
+        <li>我是ul的第12</li>
+    </ul>
+    <br>
+    <ol>
+        <li>我是ol的第1</li>
+        <li>我是ol的第2</li>
+        <li>我是ol的第3</li>
+        <li>我是ol的第4</li>
+        <li>我是ol的第5</li>
+        <li>我是ol的第6</li>
+        <li>我是ol的第7</li>
+        <li>我是ol的第8</li>
+        <li>我是ol的第9</li>
+        <li>我是ol的第10</li>
+        <li>我是ol的第11</li>
+        <li>我是ol的第12</li>
+    </ol>
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+</body>
+
+</html>
