@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0%;
+        }
+
+
+        body {
+            background-color: #333;
+        }
+
+        .box {
+            position: relative;
+            margin: 30px auto;
+            width: 640px;
+            height: 450px;
+            border: 1px solid #ccc;
+            background: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi5.hexun.com%2F2019-05-14%2F197185588.jpg&refer=http%3A%2F%2Fi5.hexun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632502844&t=b9f5ee6a0a248bc8dca37dd57dd98ff0") no-repeat;
+        }
+
+        .city {
+            position: absolute;
+            top: 157px;
+            right: 240px;
+        }
+
+        .city2 {
+            position: absolute;
+            top: 421px;
+            right: 289px;
+        }
+
+        .city3 {
+            position: absolute;
+            top: 353px;
+            right: 163px;
+        }
+
+        .wave {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: rgb(255, 0, 255);
+
+        }
+
+        .city div[class^="pulse"] {
+            position: absolute;
+            /* 保证波纹在父盒子里水平垂直居中 放大之后就会中心想四周发散 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 9px;
+            height: 9px;
+            box-shadow: 0 0 12px rgb(255, 0, 255);
+            border-radius: 50%;
+            animation: pulse 1.2s infinite linear;
+        }
+
+        .city div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        .city2 div[class^="pulse"] {
+            position: absolute;
+            /* 保证波纹在父盒子里水平垂直居中 放大之后就会中心想四周发散 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 9px;
+            height: 9px;
+            box-shadow: 0 0 12px rgb(255, 0, 255);
+            border-radius: 50%;
+            animation: pulse 1.2s infinite linear;
+        }
+
+        .city2 div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        .city2 div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        .city3 div[class^="pulse"] {
+            position: absolute;
+            /* 保证波纹在父盒子里水平垂直居中 放大之后就会中心想四周发散 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 9px;
+            height: 9px;
+            box-shadow: 0 0 12px rgb(255, 0, 255);
+            border-radius: 50%;
+            animation: pulse 1.2s infinite linear;
+        }
+
+        .city3 div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        .city3 div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes pulse {
+            0% {}
+
+            /* 此处不用sacle是因为放大会将盒子阴影一起放大 */
+            50% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="city">
+            <div class="wave"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city2">
+            <div class="wave"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city3">
+            <div class="wave"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

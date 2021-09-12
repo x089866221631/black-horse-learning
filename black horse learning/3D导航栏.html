@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D导航栏</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: fantasy;
+        }
+
+        ul {
+            margin: 100px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            width: 120px;
+            height: 35px;
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all .5s;
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .front,
+        .bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 35px;
+            color: #fff;
+        }
+
+        .front {
+            z-index: 1;
+            background-color: rgb(59, 120, 211);
+            transform: translateZ(17.5px);
+        }
+
+        ul li .box .bottom {
+            background-color: aquamarine;
+            /* 我们如果移动 或者其他样式，必须先写移动 */
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">言语不起作用</div>
+                <div class="bottom">想看到具体行动</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">向晚</div>
+                <div class="bottom">水母之歌</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">嘉然</div>
+                <div class="bottom">猫中毒</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">乃琳</div>
+                <div class="bottom">反转入脑联盟</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">贝拉</div>
+                <div class="bottom">maria</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">珈乐</div>
+                <div class="bottom">红色高跟鞋</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">search</div>
+                <div class="bottom">complete</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
